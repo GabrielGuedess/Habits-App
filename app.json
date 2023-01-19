@@ -8,6 +8,19 @@
       "backgroundColor": "#09090A",
       "resizeMode": "contain"
     },
-    "assetBundlePatterns": ["**/*"]
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7824d8e1-f28b-4fe4-b413-7bf90fa94624"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/7824d8e1-f28b-4fe4-b413-7bf90fa94624"
+    },
+    "android": {},
+    "ios": {}
   }
 }
