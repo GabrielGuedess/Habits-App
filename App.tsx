@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
+
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 
