@@ -14,7 +14,7 @@ jobs:
           node-version: 16.x
 
       - name: Set up Expo
-        uses: expo/expo-github-action@v7.2.1
+        uses: expo/expo-github-action@v7
         with:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
@@ -22,13 +22,13 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Publish to Expo & create a QR code
-        uses: expo/expo-preview-action@v1.2.2
+        uses: expo/expo-preview-action@v1
         with:
           channel: pr-${{ github.event.number }}
         id: preview
 
       - name: Comment deployment link
-        uses: unsplash/comment-on-pr@v1.3.0
+        uses: unsplash/comment-on-pr@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
