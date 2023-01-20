@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 
 const weekDays = 7;
 const screenHorizontalPadding = (32 * 2) / 5;
@@ -9,12 +9,15 @@ export const dayMarginBetween = 8;
 export const daySize =
   Dimensions.get('window').width / weekDays - (screenHorizontalPadding + 5);
 
-export function HabitDay() {
+interface HabitDayProps extends TouchableOpacityProps {}
+
+export function HabitDay({ ...props }: HabitDayProps) {
   return (
     <TouchableOpacity
       className='bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800'
       style={{ width: daySize, height: daySize }}
       activeOpacity={0.7}
+      {...props}
     ></TouchableOpacity>
   );
 }

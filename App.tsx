@@ -12,7 +12,7 @@ import {
   Inter_800ExtraBold,
 } from '@expo-google-fonts/inter';
 
-import { Home } from 'screens/Home';
+import { Routes } from 'routes';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -49,7 +49,7 @@ export default function App() {
   return (
     <View onLayout={onLayoutRootView} className='bg-background flex-1'>
       <StatusBar backgroundColor='transparent' style='light' />
-      <Home />
+      <Routes />
     </View>
   );
 }
